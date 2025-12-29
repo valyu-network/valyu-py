@@ -7,7 +7,7 @@ class DeepResearchMode(str, Enum):
     """Research mode options."""
 
     FAST = "fast"
-    LITE = "lite"
+    STANDARD = "standard"
     HEAVY = "heavy"
 
 
@@ -191,7 +191,7 @@ class DeepResearchStatusResponse(BaseModel):
     images: Optional[List[ImageMetadata]] = None
     deliverables: Optional[List[DeliverableResult]] = None
     sources: Optional[List[DeepResearchSource]] = None
-    usage: Optional[Usage] = None
+    cost: Optional[float] = None
     error: Optional[str] = None
 
 
